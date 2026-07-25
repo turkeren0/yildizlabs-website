@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=dark2">
+  <link rel="stylesheet" href="styles.css?v=dark3">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23000000'/><text x='8' y='72' font-family='sans-serif' font-weight='800' font-size='60' fill='%23ffffff'>Y</text><text x='54' y='72' font-family='sans-serif' font-weight='400' font-size='60' fill='%235250ec'>L</text></svg>">
 </head>
 <body>
@@ -30,8 +30,8 @@
 
       <ul class="nav-links">
         <li><a href="#about">Ne Yapıyoruz</a></li>
-        <li><a href="#tech">Teknoloji</a></li>
         <li><a href="#how">Nasıl Çalışır</a></li>
+        <li><a href="#coming-soon" class="nav-highlight">Yakında</a></li>
       </ul>
 
       <button class="hamburger" id="hamburger" aria-label="Menü">
@@ -42,8 +42,8 @@
 
   <div class="mobile-menu" id="mobile-menu">
     <a href="#about">Ne Yapıyoruz</a>
-    <a href="#tech">Teknoloji</a>
     <a href="#how">Nasıl Çalışır</a>
+    <a href="#coming-soon">Yakında</a>
   </div>
 
   <!-- HERO -->
@@ -62,8 +62,8 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#tech" class="btn btn-fill">Teknolojiyi keşfet →</a>
-        <a href="#about" class="btn btn-ghost">Daha fazla</a>
+        <a href="#about" class="btn btn-fill">Keşfet →</a>
+        <a href="#coming-soon" class="btn btn-ghost">Yakında...</a>
       </div>
     </div>
   </section>
@@ -129,105 +129,13 @@
     </div>
   </section>
 
-  <!-- TECHNOLOGY -->
-  <section class="tech pattern-dots" id="tech">
-    <div class="container">
-      <div class="tech-top reveal">
-        <div class="section-tag">Teknolojimiz</div>
-        <h2 class="section-heading">Uçtan uca akıllı tarım ekosistemi</h2>
-        <p class="section-sub">Sensörden buluta, drone'dan yapay zekaya ve tarımsal veri bankasına — tam entegre platform.</p>
-      </div>
-
-      <div class="tech-list">
-        <div class="tech-row reveal">
-          <div class="tech-row-left">
-            <div class="tech-row-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6M9 13h4M9 17h2"/><circle cx="18" cy="4" r="2" fill="#22c55e" stroke="none"/></svg>
-            </div>
-            <div class="tech-row-name">Sensör Kiti</div>
-            <div class="tech-row-tag">IoT Cihaz</div>
-          </div>
-          <div class="tech-row-right">
-            <p class="tech-row-desc">Toprak ve atmosfer verilerini gerçek zamanlı ölçer, LoRaWAN ağı üzerinden bulut sunucuya iletir. Güneş enerjisiyle tamamen otonom çalışır.</p>
-            <div class="tech-row-specs">
-              <span class="spec">7in1 toprak sensörü</span>
-              <span class="spec">N, P, K, pH, nem</span>
-              <span class="spec">LoRaWAN</span>
-              <span class="spec">Güneş enerjisi</span>
-              <span class="spec">STM32 PCB</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-row reveal">
-          <div class="tech-row-left">
-            <div class="tech-row-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"><path d="M12 12l-4-4M12 12l4-4M12 12l-4 4M12 12l4 4"/><circle cx="12" cy="12" r="3"/><circle cx="8" cy="8" r="1.5" fill="#22c55e" stroke="none"/><circle cx="16" cy="8" r="1.5" fill="#22c55e" stroke="none"/><circle cx="8" cy="16" r="1.5" fill="#22c55e" stroke="none"/><circle cx="16" cy="16" r="1.5" fill="#22c55e" stroke="none"/></svg>
-            </div>
-            <div class="tech-row-name">Otonom Drone</div>
-            <div class="tech-row-tag">Hava Aracı</div>
-          </div>
-          <div class="tech-row-right">
-            <p class="tech-row-desc">Belirli aralıklarla bitkileri görüntüleyerek yüksek çözünürlüklü görsel veri oluşturur. Hasat zamanı ve rekolte haritası çıkarır.</p>
-            <div class="tech-row-specs">
-              <span class="spec">4K HDR</span>
-              <span class="spec">10km+ menzil</span>
-              <span class="spec">30dk uçuş</span>
-              <span class="spec">Rekolte haritalama</span>
-              <span class="spec">Otonom görev</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-row reveal">
-          <div class="tech-row-left">
-            <div class="tech-row-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#F97316" stroke-width="1.5" stroke-linecap="round"><path d="M12 2a4 4 0 014 4c0 2-2 3-2 5h-4c0-2-2-3-2-5a4 4 0 014-4z"/><path d="M10 17h4"/><path d="M10 20h4"/><circle cx="12" cy="14" r="1" fill="#22c55e" stroke="none"/></svg>
-            </div>
-            <div class="tech-row-name">Yapay Zeka</div>
-            <div class="tech-row-tag">Derin Öğrenme</div>
-          </div>
-          <div class="tech-row-right">
-            <p class="tech-row-desc">YOLOv8 tabanlı model ile hastalık tespiti, meyve olgunluk seviyesi sınıflandırması ve rekolte tahmini yapar.</p>
-            <div class="tech-row-specs">
-              <span class="spec">Hastalık tespiti</span>
-              <span class="spec">Hasat & rekolte tahmini</span>
-              <span class="spec">3 olgunluk seviyesi</span>
-              <span class="spec">Gray Mold & Anthracnose</span>
-              <span class="spec">%87 mAP</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tech-row reveal">
-          <div class="tech-row-left">
-            <div class="tech-row-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#5250ec" stroke-width="1.5" stroke-linecap="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-            </div>
-            <div class="tech-row-name">Veri Bankası</div>
-            <div class="tech-row-tag">Tarımın Hafızası</div>
-          </div>
-          <div class="tech-row-right">
-            <p class="tech-row-desc">Sahanın mikroklima, toprak ve biyolojik gelişim geçmişini yıllar boyu biriktirerek tarlanızın dijital hafızasını oluşturur ve her sezon daha hassas kararlar üretir.</p>
-            <div class="tech-row-specs">
-              <span class="spec">Tarımın dijital hafızası</span>
-              <span class="spec">Zaman serisi analizi</span>
-              <span class="spec">Sezonluk rekolte geçmişi</span>
-              <span class="spec">Büyüyen veri bankası</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- HOW IT WORKS -->
-  <section class="how pattern-grid pattern-noise" id="how">
+  <section class="how pattern-dots pattern-noise" id="how">
     <div class="container">
       <div class="how-top reveal">
         <div class="section-tag">Nasıl çalışır</div>
         <h2 class="section-heading">Tarladan buluta, veriden aksiyona</h2>
-        <p class="section-sub">Sensörlerden toplanan veriler yapay zeka ile anlamlandırılır, tarımsal hafızaya kaydedidir.</p>
+        <p class="section-sub">Sensörlerden toplanan veriler yapay zeka ile anlamlandırılır, tarımsal hafızaya kaydedilir.</p>
       </div>
 
       <div class="how-steps reveal">
@@ -258,6 +166,23 @@
     </div>
   </section>
 
+  <!-- COMING SOON -->
+  <section class="coming-soon pattern-grid" id="coming-soon">
+    <div class="container">
+      <div class="coming-soon-card reveal">
+        <div class="coming-soon-badge">
+          <span class="pulse-indicator"></span> YENİ SEZONDA
+        </div>
+        <h2 class="coming-soon-title">
+          Yakında<span class="animated-dots"><span class="dot-1">.</span><span class="dot-2">.</span><span class="dot-3">.</span></span>
+        </h2>
+        <p class="coming-soon-desc">
+          YıldızLabs akıllı tarım platformu, otonom saha ekosistemi ve derin öğrenme modelleri çok yakında sahalarda hizmetinizde.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
@@ -267,8 +192,8 @@
 
       <ul class="footer-links">
         <li><a href="#about">Ne Yapıyoruz</a></li>
-        <li><a href="#tech">Teknoloji</a></li>
         <li><a href="#how">Nasıl Çalışır</a></li>
+        <li><a href="#coming-soon">Yakında</a></li>
       </ul>
 
       <p class="footer-copy">© 2025 YıldızLabs</p>
