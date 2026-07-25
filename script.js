@@ -19,10 +19,19 @@ function initVividParticles() {
   let particles = [];
   let ripples = [];
   let mouse = { x: -1000, y: -1000, radius: 220 };
+  let w = window.innerWidth;
+  let h = window.innerHeight;
 
   function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    w = window.innerWidth;
+    h = window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.floor(w * dpr);
+    canvas.height = Math.floor(h * dpr);
+    canvas.style.width = w + 'px';
+    canvas.style.height = h + 'px';
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.scale(dpr, dpr);
   }
   resize();
   window.addEventListener('resize', resize);
@@ -55,8 +64,8 @@ function initVividParticles() {
     }
 
     reset() {
-      this.x = Math.random() * canvas.width;
-      this.y = Math.random() * canvas.height;
+      this.x = Math.random() * w;
+      this.y = Math.random() * h;
       this.baseSize = Math.random() * 4 + 3;
       this.size = this.baseSize;
       this.vx = (Math.random() - 0.5) * 0.65;
@@ -98,10 +107,10 @@ function initVividParticles() {
 
       this.size = currentSize;
 
-      if (this.x < -20) this.x = canvas.width + 20;
-      if (this.x > canvas.width + 20) this.x = -20;
-      if (this.y < -20) this.y = canvas.height + 20;
-      if (this.y > canvas.height + 20) this.y = -20;
+      if (this.x < -20) this.x = w + 20;
+      if (this.x > w + 20) this.x = -20;
+      if (this.y < -20) this.y = h + 20;
+      if (this.y > h + 20) this.y = -20;
     }
 
     draw() {
